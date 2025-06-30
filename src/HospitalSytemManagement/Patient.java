@@ -23,8 +23,7 @@ public class Patient extends Person {
 
     public void discharge() {
         this.admitted = false;
-        this.admissionDate = null;
-        System.out.println("Patient " + getName() + " has been discharged." + "Admission Date: " + LocalDateTime.now().toLocalDate());
+        System.out.println("Patient " + getName() + " has been discharged." +  LocalDateTime.now().toLocalDate());
     }
     public boolean isAdmitted(){
         return admitted;

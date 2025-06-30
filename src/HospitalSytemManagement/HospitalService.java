@@ -2,9 +2,9 @@ package HospitalSytemManagement;
 
 public class HospitalService {
 
-    public double getServicePrice(String service) {
+    /*public double getServicePrice(String service) {
         switch (service.toLowerCase()) {
-            case "consultation":
+            case "consultation ":
                 return 50;
             case "surgery":
                 return 1500;
@@ -19,7 +19,19 @@ public class HospitalService {
             default:
                 return 100;
         }
-    }
+    } */
+        public double getServicePrice(String service) {
+            if (service == null) return 100;
+            return switch (service.trim().toLowerCase()) {
+                case "consultation" -> 50;
+                case "surgery" -> 1500;
+                case "icu" -> 500;
+                case "emergency" -> 250;
+                case "x-ray" -> 200;
+                case "bloodtest" -> 100;
+                default -> 100;
+            };
+        }
 
     public double calculateBill(Patient patient, String service) {
         return getServicePrice(service);

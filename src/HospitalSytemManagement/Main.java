@@ -18,8 +18,8 @@ public class Main {
         patient2.printDetails();
 
         LocalDateTime appointmentTime = LocalDateTime.now().plusHours(5);
-        Appointment appointment = new Appointment(patient1, doctor, appointmentTime, true);
-        Appointment appointment2 = new Appointment(patient2, doctor, appointmentTime, true);
+        Appointment appointment = new Appointment(patient1, doctor, appointmentTime);
+        Appointment appointment2 = new Appointment(patient2, doctor, appointmentTime);
 
         System.out.println("\n--- Appointment Details ---");
         appointment.schedule();
