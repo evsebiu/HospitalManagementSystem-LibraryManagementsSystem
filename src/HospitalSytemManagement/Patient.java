@@ -37,8 +37,6 @@ public class Patient extends Person {
         System.out.println("Admitted: " + (admitted ? "Yes" : "No"));
         if (admitted) {
             System.out.println("Admission Date: " + (admitted ? admissionDate : "Not Applicable"));
-        } else {
-            System.out.println("Admission Date: Not Applicable");
         }
     }
     public String getCondition() {

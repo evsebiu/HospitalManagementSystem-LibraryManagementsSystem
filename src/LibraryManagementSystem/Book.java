@@ -16,6 +16,9 @@ public class Book {
         this.isAvailable=isAvailable;
         this.publicationDate=publicationDate;
     }
+    public String getAuthor(){
+        return author;
+    }
 
     public void borrow(){
         if(isAvailable){

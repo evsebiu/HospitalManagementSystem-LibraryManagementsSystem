@@ -1,6 +1,5 @@
 package HospitalSytemManagement;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Main {
@@ -19,12 +18,11 @@ public class Main {
         patient2.printDetails();
 
         LocalDateTime appointmentTime = LocalDateTime.now().plusHours(5);
-        Appointment appointment = new Appointment(patient1, doctor, appointmentTime, false);
+        Appointment appointment = new Appointment(patient1, doctor, appointmentTime, true);
         Appointment appointment2 = new Appointment(patient2, doctor, appointmentTime, true);
 
         System.out.println("\n--- Appointment Details ---");
         appointment.schedule();
-        appointment2.schedule();
         appointment.printSummary();
         System.out.println();
         appointment2.schedule();
@@ -46,7 +44,9 @@ public class Main {
 
         HospitalService services = new HospitalService();
         services.monitorTemperature(98.6, patient1);
-        services.checkPulse(72, patient2);
+        services.checkPulse(90, patient1);
+        services.checkPulse(129, patient2);
+        services.monitorTemperature(64,patient2);
         System.out.println();
 
         // o singura factura pentru serviciu

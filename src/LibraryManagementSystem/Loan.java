@@ -7,7 +7,7 @@ public class Loan {
     private Book book;
     private LocalDateTime loanDate;
     private LocalDateTime returnDate;
-    private boolean isOverdue;
+    boolean isOverdue;
 
     public Loan(User user, Book book, LocalDateTime loanDate, LocalDateTime returnDate, boolean isOverdue){
         this.user=user;
@@ -36,5 +36,17 @@ public class Loan {
         System.out.println("Loan Date: " + loanDate);
         System.out.println("Return Date: " + returnDate);
         System.out.println("Is Overdue: " + isOverdue);
+    }
+
+    public User getUser() {
+    return getUser();
+    }
+
+    public Book getBook() {
+        return book;
+    }
+
+    public boolean isOverdue() {
+        return isOverdue;
     }
 }

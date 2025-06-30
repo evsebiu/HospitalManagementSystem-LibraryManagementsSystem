@@ -2,7 +2,8 @@ package HospitalSytemManagement;
 
 public class Nurse extends Person{
     private String shift;
-    Nurse(String name, int age, String gender, String shift){
+
+    public Nurse(String name, int age, String gender, String shift){
         super(name,age,gender);
         this.shift=shift;
     }

@@ -9,14 +9,14 @@ public class Appointment {
     private LocalDateTime dateTime;
     private boolean confirmed;
 
-    Appointment(Patient patient, Doctor doctor, LocalDateTime dateTime, boolean confirmed){
+    public Appointment(Patient patient, Doctor doctor, LocalDateTime dateTime, boolean confirmed){
         this.patient=patient;
         this.doctor=doctor;
         this.dateTime=dateTime;
         this.confirmed=confirmed;
     }
     public void schedule(){
-        this.confirmed=true;
+        if (this.confirmed=true);
         System.out.println("Appointment scheduled for " + patient.getName() + " with " + doctor.getName() + " on " + dateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")));
 
     }

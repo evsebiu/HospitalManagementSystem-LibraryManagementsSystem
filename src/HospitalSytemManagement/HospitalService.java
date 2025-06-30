@@ -76,7 +76,7 @@ public class HospitalService {
                 System.out.println("\nDoctor " + doctor.getName() + " will meet patient shortly for consultation: " + patient.getName());
                 break;
             case 2:
-                System.out.println("Surgery for " + patient.getName());
+                System.out.println("Surgery for " + patient.getName() + " scheduled with Dr. " + doctor.getName());
                 break;
             case 3:
                 System.out.println("ICU Admission for " + patient.getName());
